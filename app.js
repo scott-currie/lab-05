@@ -77,14 +77,11 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   var sum2 = 0;
   var sum2String = '';
-
   for (var i in sumArr) {
     sum2 = sum(sum2, sumArr[i])[0];
     sum2String += sumArr[i] + ',';
   }
   sum2String = sum2String.substring(0, 5) + ' was passed in as an array of numbers, and ' + sum2 + ' is their sum.';
-  console.log(sum2);
-  console.log(sum2String);
   return [sum2, sum2String];
 }
 
@@ -94,7 +91,6 @@ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
 /* Problem 5
 Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -106,11 +102,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var product2 = 1;
+  var prod2String = '';
+  for (var i in multArr) {
+    product2 = multiply(product2, multArr[i])[0];
+    prod2String += multArr[i] + ',';
+  }
+  prod2String = 'The numbers ' + prod2String.substring(0, 5) + ' have a product of ' + product2 + '.';
+  return [product2, prod2String];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
